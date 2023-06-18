@@ -99,13 +99,13 @@ class bootstrap {
     log("Loader Success");
     log("Loader Items List : " + LoadItems.length);
 
-    fs.readdir("./.ROBLOXSECURITY", (err, files) => {
+    fs.readdir("./ROBLOXSECURITY", (err, files) => {
       if (err) throw err;
       const validFilePath = "./valid.txt"; // ตำแหน่งไฟล์ valid.txt
       log(`Loader Cookies File : ${files.length}`);
       files.forEach((file) => {
         const readStream = fs.createReadStream(
-          `./.ROBLOXSECURITY/${file}`,
+          `./ROBLOXSECURITY/${file}`,
           "utf8"
         );
         const rl = readline.createInterface({ input: readStream });
